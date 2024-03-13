@@ -20,6 +20,9 @@ int main(){
     }catch(invalid_argument& e){
       cout << "Not a valid entry" << endl;
       goto endloop;
+    }catch(out_of_range& e){
+      cout << "Too big or too low" << endl;
+      goto endloop;
     }
 
     if(result > numberToGuess ){
